@@ -5,7 +5,7 @@ public class SortarePrinSelectie extends General {
         super(max);
     }
 
-    void  sortarePS() {
+    void  sortarePS(int[] array2) {
         int out, in, min;
         for (out = 0; out < nrElements - 1; out++) {
             min = out;

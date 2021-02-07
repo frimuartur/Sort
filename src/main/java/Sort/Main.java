@@ -2,25 +2,53 @@ package Sort;
 
 import PersonalUpdates.SortArray;
 
+import java.util.Arrays;
+
+
 public class Main {
     public static void main(String[] args) {
-        SortareBubleSort sortare = new SortareBubleSort(100);
-        //SortarePrinSelectie sortare = new SortarePrinSelectie(100);
-        //SortarePrinInserare sortare = new SortarePrinInserare(100);
-        SortArray sort = new SortArray();
+        General general = new General(100);
+        int [] array = new int[50];
+        //int [] arraySorted = new int[]{1,2,3,4,5,6,7,8,9,10};
+        general.creareArray(array,50);
 
-        int a = (int) (Math.random() * 1000);
-        int b = (int) (Math.random() * 1000);
-        int c = (int) (Math.random() * 1000);
-        int d = (int) (Math.random() * 1000);
-        int e = (int) (Math.random() * 1000);
-        int f = (int) (Math.random() * 1000);
-        int g = (int) (Math.random() * 1000);
-        int h = (int) (Math.random() * 1000);
+        int [] array1 = array;
+        int [] array2 = array;
+        int [] array3 = array;
+        int [] array4 = array;
+        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
+        System.out.println(Arrays.toString(array3));
+        System.out.println(Arrays.toString(array4));
 
-        int[] arr = new int[]{a, b, c, d, e, f, g, h};
-        int[] arr1 = new int[]{a, b, c, d, e, f, g, h};
-        int[] arr2 = new int[]{3,2,4,1};
+
+        QuickSort.sort(array, 0, array.length - 1);
+        System.out.println("sorted array with Quick Sort");
+        System.out.println(Arrays.toString(array));
+
+        MergeSort.mergeSort(array4);
+        System.out.println("sorted array with Merge Sort");
+        System.out.println(Arrays.toString(array4));
+
+        SortArray.sortareBS(array1);
+        System.out.println("sorted array with Bubble Sort");
+        System.out.println(Arrays.toString(array1));
+
+        SortArray.sortarePS(array2);
+        System.out.println("sorted array with selectie");
+        System.out.println(Arrays.toString(array2));
+
+        SortArray.sortarePI(array3);
+        System.out.println("sorted array with inserare");
+        System.out.println(Arrays.toString(array3));
+
+        TestSpeedSort.test1();
+    }
+
+}
+
+/*
         sortare.introduElement(3);
         sortare.introduElement(2);
         sortare.introduElement(4);
@@ -30,6 +58,8 @@ public class Main {
         //sortare.afiseaza();
         //sortare.sortareBS();
         //sortare.afiseaza();
+
+
 
         sort.afiseazaArray(arr);
         System.out.println(" ");
@@ -44,6 +74,8 @@ public class Main {
         sort.sortarePS(arr1);
         sort.afiseazaArray(arr1);
         System.out.println(" ");
+
+        */
 
 
       /*  // _________________________________
@@ -62,6 +94,3 @@ public class Main {
         System.out.println("Dupa sortare:");
         array.afisare();
 */
-
-    }
-}

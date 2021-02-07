@@ -5,7 +5,7 @@ class SortareBubleSort extends General {
         super(max);
     }
 
-    public void sortareBS() {
+    public void sortareBS(int[] array1) {
         int in, out = 0, temp;
         for (out = nrElements - 1; out > 0; out--) {
             for (in = 0; in < out; in++) {

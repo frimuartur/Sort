@@ -6,7 +6,7 @@ public class SortarePrinInserare extends General {
         super(max);
     }
 
-    void sortarePI() {
+    void sortarePI(int[] array3) {
         int in, out;
         for (out = 1; out < nrElements; out++) {
             double temp = arr[out];

@@ -7,25 +7,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class SortareBubleSortTest {
 
     @org.junit.jupiter.api.Test
-    void sortareBS() {
-        SortArray sortArray = new SortArray();
-        int a = (int) (Math.random() * 100);
-        int b = (int) (Math.random() * 100);
-        int c = (int) (Math.random() * 100);
-        int d = (int) (Math.random() * 100);
-        int e = (int) (Math.random() * 100);
-        int f = (int) (Math.random() * 100);
-        int g = (int) (Math.random() * 100);
-        int h = (int) (Math.random() * 100);
-        int j = (int) (Math.random() * 100);
-        int k = (int) (Math.random() * 100);
-        int l = (int) (Math.random() * 100);
-        int q = (int) (Math.random() * 100);
-        int[] arr2 = new int[]{a,b,c,d,e,f,g,h,j,k,l,q};
-        for (int i = 0; i < 100000; i++) {
-            assertArrayEquals(sortArray.sortareBS(arr2), sortArray.sortarePS(arr2));
-            assertArrayEquals(sortArray.sortarePI(arr2), sortArray.sortarePS(arr2));
-            assertArrayEquals(sortArray.sortareBS(arr2), sortArray.sortarePI(arr2));
+    void sortare() {
+        General general = new General(100);
+        //int [] arr2 = new int[]{3,5,3,2,5};
+        int[] arr2 = new int[1000];
+        general.creareArray(arr2,1000);
+        for (int i = 0; i < 1000; i++) {
+            assertArrayEquals(SortArray.sortareBS(arr2), SortArray.sortarePS(arr2));
+            assertArrayEquals(SortArray.sortarePI(arr2), SortArray.sortarePS(arr2));
+            assertArrayEquals(SortArray.sortareBS(arr2), SortArray.sortarePI(arr2));
+            assertArrayEquals(QuickSort.sort(arr2, 0, arr2.length - 1), SortArray.sortarePI(arr2));
+            assertArrayEquals(QuickSort.sort(arr2, 0, arr2.length - 1), SortArray.sortareBS(arr2));
+            assertArrayEquals(QuickSort.sort(arr2, 0, arr2.length - 1), SortArray.sortarePS(arr2));
+            assertArrayEquals(MergeSort.mergeSort(arr2), SortArray.sortarePS(arr2));
+            assertArrayEquals(MergeSort.mergeSort(arr2), QuickSort.sort(arr2, 0, arr2.length - 1));
+
         }
     }
 }

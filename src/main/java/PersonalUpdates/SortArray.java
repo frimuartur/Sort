@@ -1,7 +1,7 @@
 package PersonalUpdates;
 
 public class SortArray {
-    public int [] sortareBS(int[] array) {
+    public static int [] sortareBS(int[] array) {
         int temp = 0;
         int in = 0;
         int out = 0;
@@ -21,7 +21,7 @@ public class SortArray {
     // <-------------------------------------------------------------------------->
     // Sortare Prin Selectie //
 // <-------------------------------------------------------------------------->
-    public int [] sortarePS(int[] v) {
+    public static int [] sortarePS(int[] v) {
         boolean scambio;
         int j = v.length - 1;
         do {
@@ -45,7 +45,7 @@ public class SortArray {
     // Sortare Prin Inserare //
 // <-------------------------------------------------------------------------->
 
-    public int[] sortarePI(int[] arr) {
+    public static int[] sortarePI(int[] arr) {
         int in, out;
         for (out = 1; out < arr.length; out++) {
             double temp = arr[out];

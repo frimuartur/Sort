@@ -27,5 +27,11 @@ public class General {
         arr[one] = arr[two];
         arr[two] = temp;
     }
+    public void creareArray(int [] arr, int size){
+        for(int i = 0; i < size; i ++){
+            int a = (int) (Math.random() * 100);
+            arr[i] = a;
+        }
+    }
 }
 
